@@ -4,3 +4,5 @@ metadata: # kpt-merge: /envoy
   name: envoy
   annotations:
     internal.kpt.dev/upstream-identifier: '|Namespace|default|envoy'
+  labels:
+    cloud: dcn

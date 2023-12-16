@@ -5,14 +5,18 @@ metadata: # kpt-merge: envoy/envoy
   namespace: envoy
   annotations:
     internal.kpt.dev/upstream-identifier: 'apps|Deployment|envoy|envoy'
+  labels:
+    cloud: dcn
 spec:
   selector:
     matchLabels:
       app: envoy
+      cloud: dcn
   template:
     metadata:
       labels:
         app: envoy
+        cloud: dcn
     spec:
       containers:
       - name: envoy

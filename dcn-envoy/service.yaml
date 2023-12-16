@@ -5,9 +5,12 @@ metadata: # kpt-merge: envoy/envoy
   namespace: envoy
   annotations:
     internal.kpt.dev/upstream-identifier: '|Service|envoy|envoy'
+  labels:
+    cloud: dcn
 spec:
   selector:
     app: envoy
+    cloud: dcn
   ports:
   - port: 80
     targetPort: 10000
